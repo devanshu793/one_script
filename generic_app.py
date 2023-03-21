@@ -97,6 +97,27 @@ if download:
         f.write('STAGING_DIR = "' + str(STAGING_DIR) + '"\n')
         f.write('SOURCE_DIR = "' + str(SOURCE_DIR) + '"\n')
         f.write('FTP_DIR = "' + str(FTP_DIR) + '"\n')
+        f.write('parameter = ' + str(parameter) + '\n')
+        f.write('dext = "' + str(dext) + '"\n')
+        f.write('cext = "' + str(cext) + '"\n')
+        f.write('header = "' + str(header) + '"\n')
+        f.write('footer = "' + str(footer) + '"\n')
+        f.write('delim = "' + str(delim) + '"\n')
+        f.write('r_pos = ' + str(r_pos) + '\n')
+        f.write('b_pos = ' + str(b_pos) + '\n')
+        f.write('FTP_DIR = "' + str(FTP_DIR) + '"\n')
+        f.write('remote_host_src = "' + str(remote_host_src) + '"\n')
+        f.write('remote_user_src = "' + str(remote_user_src) + '"\n')
+        f.write('remote_path_src = "' + str(remote_path_src) + '"\n')
+        f.write('local_path = "' + str(local_path) + '"\n')
+        f.write('last_date_file = "' + str(last_date_file) + '"\n')
+        f.write('keyfile_src = "' + str(keyfile_src) + '"\n')
+        f.write('PORT_SRC = ' + str(PORT_SRC) + '\n')
+        f.write('DEST_DIR_SFTP_PULL = "' + str(DEST_DIR_SFTP_PULL) + '"\n')
+        f.write('SRC_DIR_SFTP_PULL = "' + str(SRC_DIR_SFTP_PULL) + '"\n')
+        f.write('date_pattern_src = "' + str(date_pattern_src) + '"\n')
+        f.write('remote_server_clean = "' + str(remote_server_clean) + '"\n')
+        
     
 
 
