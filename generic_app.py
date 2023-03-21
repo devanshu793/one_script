@@ -54,20 +54,27 @@ with col3:
    st.header("Control file")
    cext_mf=st.text_input("c extension mf")
    dext_mf=st.text_input("d extension mf")
-   header=st.text_input("header")
-   footer=st.text_input("footer")
+   header=option = st.selectbox(
+    'Header',
+    ('y', 'n'))
+   footer= st.selectbox(
+    'Footer',
+    ('y', 'n'))
    #SRC_DIR_CF=st.text_input("src dir")
    #DEST_DIR_CF=st.text_input("dest dir")
    delim=st.text_input("delimiter")
    r_pos=st.text_input("r_pos")
    b_pos=st.text_input("b_pos")
 
-print("it is going to write file")
-with open('generic.properties', 'w') as f:
-    f.write('INPOOL_DIR = "' + str(INPOOL_DIR) + '"\n')  
-    f.write('STAGING_DIR = "' + str(STAGING_DIR) + '"\n')
-    f.write('SOURCE_DIR = "' + str(SOURCE_DIR) + '"\n')
-    f.write('FTP_DIR = "' + str(FTP_DIR) + '"\n')
+
+download=st.button("Download properties file")
+if download:
+    print("it is going to write file")
+    with open('generic.properties', 'w') as f:
+        f.write('INPOOL_DIR = "' + str(INPOOL_DIR) + '"\n')  
+        f.write('STAGING_DIR = "' + str(STAGING_DIR) + '"\n')
+        f.write('SOURCE_DIR = "' + str(SOURCE_DIR) + '"\n')
+        f.write('FTP_DIR = "' + str(FTP_DIR) + '"\n')
     
 
 
