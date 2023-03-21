@@ -24,7 +24,7 @@ def add_bg_from_url():
 
 add_bg_from_url()
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 ,col4 = st.columns(4)
 
 with col1:
    #new_col1 = '<p style="font-family:arial; color:Black; font-size: 32px;font-weight: 900;">Global Variables</p>'
@@ -39,8 +39,8 @@ with col1:
 with col2:
    #new_col2 = '<p style="font-family:arial; color:Black; font-size: 32px;font-weight: 900;">Lexographical parameter</p>'
    #st.markdown(new_col2, unsafe_allow_html=True)
-   st.header("Lexographical parameters")
-   parameter=st.text_input("enter parameter")
+   st.header("Lex params")
+   parameter=st.text_input("enter params")
    dext=st.text_input("d extension")
    cext=st.text_input("c extension")
    #SRC_DIR_LEX=st.text_input("source directory of lex")
@@ -54,7 +54,7 @@ with col3:
    st.header("Control file")
    cext_mf=st.text_input("c extension mf")
    dext_mf=st.text_input("d extension mf")
-   header=option = st.selectbox(
+   header =st.selectbox(
     'Header',
     ('y', 'n'))
    footer= st.selectbox(
@@ -65,7 +65,29 @@ with col3:
    delim=st.text_input("delimiter")
    r_pos=st.text_input("r_pos")
    b_pos=st.text_input("b_pos")
-
+   
+   
+with col4:
+   #new_col2 = '<p style="font-family:arial; color:Black; font-size: 32px;font-weight: 900;">Control File</p>'
+   #st.markdown(new_col2, unsafe_allow_html=True)
+   st.header("SFTP pull")
+   remote_host_src=st.text_input("remote host")
+   remote_user_src=st.text_input("remote user")
+   remote_path_src=st.text_input("remote path")
+   local_path=st.text_input("local path")
+   last_date_file=st.text_input("last date file")
+   keyfile_src=st.text_input("key file source")
+   PORT_SRC=st.text_input("port")
+   DEST_DIR_SFTP_PULL=st.text_input("destination dir")
+   SRC_DIR_SFTP_PULL=st.text_input("source dir")
+   date_pattern_src=st.text_input("edate pattern")
+   remote_server_clean= st.selectbox(
+    'clean remote server',
+    ('y', 'n'))
+   
+   
+   
+   
 
 download=st.button("Download properties file")
 if download:
