@@ -1,7 +1,7 @@
 import streamlit as st
 st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Deutsche_Telekom_2022.svg/1024px-Deutsche_Telekom_2022.svg.png", width =100)
 
-st.title('ONE Script%%%%%')
+st.title('ONE Script')
 #new_title = '<p style="font-family:ariel; color:Black; font-size: 54px;font-weight: 900;">ONE Script</p>'
 #st.markdown(new_title, unsafe_allow_html=True)
 
