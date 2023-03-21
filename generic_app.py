@@ -24,7 +24,7 @@ def add_bg_from_url():
 
 add_bg_from_url()
 
-col1, col2, col3 ,col4 = st.columns(4)
+col1, col2, col3 ,col4 ,col5= st.tabs(["Global parameters","Lex params","Control file","SFTP pull","Download properties file"])
 
 with col1:
    #new_col1 = '<p style="font-family:arial; color:Black; font-size: 32px;font-weight: 900;">Global Variables</p>'
@@ -86,37 +86,42 @@ with col4:
     ('y', 'n'))
    
    
+with col5:
+   download=st.button("Download properties file")
+   if download:
+       print("it is going to write file")
+       with open('generic.properties', 'w') as f:
+           f.write('INPOOL_DIR = "' + str(INPOOL_DIR) + '"\n')  
+           f.write('STAGING_DIR = "' + str(STAGING_DIR) + '"\n')
+           f.write('SOURCE_DIR = "' + str(SOURCE_DIR) + '"\n')
+           f.write('FTP_DIR = "' + str(FTP_DIR) + '"\n')
+           f.write('parameter = ' + str(parameter) + '\n')
+           f.write('dext = "' + str(dext) + '"\n')
+           f.write('cext = "' + str(cext) + '"\n')
+           f.write('header = "' + str(header) + '"\n')
+           f.write('footer = "' + str(footer) + '"\n')
+           f.write('delim = "' + str(delim) + '"\n')
+           f.write('r_pos = ' + str(r_pos) + '\n')
+           f.write('b_pos = ' + str(b_pos) + '\n')
+           f.write('FTP_DIR = "' + str(FTP_DIR) + '"\n')
+           f.write('remote_host_src = "' + str(remote_host_src) + '"\n')
+           f.write('remote_user_src = "' + str(remote_user_src) + '"\n')
+           f.write('remote_path_src = "' + str(remote_path_src) + '"\n')
+           f.write('local_path = "' + str(local_path) + '"\n')
+           f.write('last_date_file = "' + str(last_date_file) + '"\n')
+           f.write('keyfile_src = "' + str(keyfile_src) + '"\n')
+           f.write('PORT_SRC = ' + str(PORT_SRC) + '\n')
+           f.write('DEST_DIR_SFTP_PULL = "' + str(DEST_DIR_SFTP_PULL) + '"\n')
+           f.write('SRC_DIR_SFTP_PULL = "' + str(SRC_DIR_SFTP_PULL) + '"\n')
+           f.write('date_pattern_src = "' + str(date_pattern_src) + '"\n')
+           f.write('remote_server_clean = "' + str(remote_server_clean) + '"\n')
+      
+   
+
+   
    
    
 
-download=st.button("Download properties file")
-if download:
-    print("it is going to write file")
-    with open('generic.properties', 'w') as f:
-        f.write('INPOOL_DIR = "' + str(INPOOL_DIR) + '"\n')  
-        f.write('STAGING_DIR = "' + str(STAGING_DIR) + '"\n')
-        f.write('SOURCE_DIR = "' + str(SOURCE_DIR) + '"\n')
-        f.write('FTP_DIR = "' + str(FTP_DIR) + '"\n')
-        f.write('parameter = ' + str(parameter) + '\n')
-        f.write('dext = "' + str(dext) + '"\n')
-        f.write('cext = "' + str(cext) + '"\n')
-        f.write('header = "' + str(header) + '"\n')
-        f.write('footer = "' + str(footer) + '"\n')
-        f.write('delim = "' + str(delim) + '"\n')
-        f.write('r_pos = ' + str(r_pos) + '\n')
-        f.write('b_pos = ' + str(b_pos) + '\n')
-        f.write('FTP_DIR = "' + str(FTP_DIR) + '"\n')
-        f.write('remote_host_src = "' + str(remote_host_src) + '"\n')
-        f.write('remote_user_src = "' + str(remote_user_src) + '"\n')
-        f.write('remote_path_src = "' + str(remote_path_src) + '"\n')
-        f.write('local_path = "' + str(local_path) + '"\n')
-        f.write('last_date_file = "' + str(last_date_file) + '"\n')
-        f.write('keyfile_src = "' + str(keyfile_src) + '"\n')
-        f.write('PORT_SRC = ' + str(PORT_SRC) + '\n')
-        f.write('DEST_DIR_SFTP_PULL = "' + str(DEST_DIR_SFTP_PULL) + '"\n')
-        f.write('SRC_DIR_SFTP_PULL = "' + str(SRC_DIR_SFTP_PULL) + '"\n')
-        f.write('date_pattern_src = "' + str(date_pattern_src) + '"\n')
-        f.write('remote_server_clean = "' + str(remote_server_clean) + '"\n')
         
     
 
